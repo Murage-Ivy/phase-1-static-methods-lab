@@ -10,8 +10,7 @@ class Formatter {
 
   static titleize(string) {
     const excludeWords = ['a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from', 'the'];
-    const newString = string.split(' ');
-    return newString.map((word, index) => {
+    return string.split(' ').map((word, index) => {
       return excludeWords.includes(word) && index !== 0 ? [word] : this.capitalize(word)
     }).join(' ')
 
